@@ -18,7 +18,7 @@ import Checkin from "./pages/Checkin";
 import Signup from "./pages/Signup";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import { DarkModeProvider } from "./context/DarkModeContext";
-
+import Uploader from "./data/Uploader";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -53,6 +53,7 @@ function App() {
               <Route path="users" element={<Users />} />
               <Route path="settings" element={<Settings />} />
               <Route path="account" element={<Account />} />
+              <Route path="upload" element={<Uploader />} />
             </Route>
 
             <Route path="login" element={<Login />} />

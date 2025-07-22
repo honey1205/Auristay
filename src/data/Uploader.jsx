@@ -16,17 +16,17 @@ import { guests } from "./data-guests";
 // };
 
 async function deleteGuests() {
-  const { error } = await supabase.from("guests").delete().gt("id", 0);
+  const { error } = await supabase.from("guests").delete().not("id", "is", null);
   if (error) console.log(error.message);
 }
 
 async function deleteCabins() {
-  const { error } = await supabase.from("cabins").delete().gt("id", 0);
+  const { error } = await supabase.from("cabins").delete().not("id", "is", null);
   if (error) console.log(error.message);
 }
 
 async function deleteBookings() {
-  const { error } = await supabase.from("bookings").delete().gt("id", 0);
+  const { error } = await supabase.from("bookings").delete().not("id", "is", null);
   if (error) console.log(error.message);
 }
 
